@@ -10,13 +10,13 @@ There are two methods for getting started with this repo.
 #### Familiar with Git?
 
 ```
-  > git clone git@github.com:KaiHotz/react-rollup-boilerplate.git
-  > cd react-rollup-boilerplate
+  > git clone git@github.com:paiyou-network/react-pangu.git
+  > cd react-pangu
   > yarn install
 ```
 
 #### Not Familiar with Git?
-Click [here](https://github.com/KaiHotz/react-rollup-boilerplate/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+Click [here](https://github.com/paiyou-network/react-pangu/archive/master.zip) to download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
 
 ```
   > yarn install

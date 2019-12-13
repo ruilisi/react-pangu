@@ -1,14 +1,14 @@
 {
-  "name": "react-rollup-boilerplate",
+  "name": "react-pangu",
   "version": "1.2.0",
   "description": "Boilerplate for writing React Libraries bundled with Rollup.js to commonJs and ES6 Modules and React Styleguidist",
   "author": "Kai Hotz",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:KaiHotz/react-rollup-boilerplate.git"
+    "url": "git@github.com:paiyou-network/react-pangu.git"
   },
-  "homepage": "https://github.com/KaiHotz/react-rollup-boilerplate",
+  "homepage": "https://github.com/paiyou-network/react-pangu",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
