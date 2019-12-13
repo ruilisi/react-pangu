@@ -6,9 +6,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:paiyou-network/react-pangu.git"
+    "url": "git@github.com:ruilisi/react-pangu.git"
   },
-  "homepage": "https://github.com/paiyou-network/react-pangu",
+  "homepage": "https://github.com/ruilisi/react-pangu",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
