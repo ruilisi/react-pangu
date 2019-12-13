@@ -1,7 +1,8 @@
-## Support
-If you like the project and want to support my work, you can buy me a coffee :)
+# React Pangu
 
-[![paypal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/kaihotz)
+React-pangu is a react components library built by **Ruilisi Co., Ltd**. Thanks to  KaiHotz for your great repo [react-rollup-boilerplate](https://github.com/KaiHotz/react-rollup-boilerplate) which makes our work easy.
+
+[API Doc](https://ruilisi.github.io/react-pangu/)
 
 # Getting started
 
