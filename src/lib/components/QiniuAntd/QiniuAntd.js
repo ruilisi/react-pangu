@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import {
-  Upload, Button, Icon, Spin,
+  Upload, Button, Icon, Spin, message,
 } from 'antd'
 
 const uploadProps = {
@@ -10,7 +10,7 @@ const uploadProps = {
 }
 
 const QiniuAntd = ({
-  token, onSuccess, keyPrefix, keyFunc,
+  token, onSuccess, keyPrefix, keyFunc, limitedSize,
 }) => {
   const [uploading, setUploading] = useState(false)
   const [filename, setFilename] = useState('')
@@ -35,7 +35,15 @@ const QiniuAntd = ({
       {...uploadProps}
       accept="image/*"
       showUploadList={false}
-      beforeUpload={file => setFilename(file.name)}
+      beforeUpload={file => {
+        setFilename(file.name)
+        const isLt2M = file.size / 1024 / 1024 < limitedSize
+        if (!isLt2M) {
+          message.error(`Image must smaller than ${limitedSize}MB!`)
+        }
+
+        return isLt2M
+      }}
       data={{ token, key: keyFunc(keyPrefix, filename) }}
       onChange={handleAvatarChange}
     >
@@ -49,6 +57,8 @@ const QiniuAntd = ({
 
 QiniuAntd.propTypes = {
   token: PropTypes.string.isRequired,
+  /** Image default limit size 2MB */
+  limitedSize: PropTypes.number,
   /** Function called when uploading is dong */
   onSuccess: PropTypes.func.isRequired,
   /** Prefix for key of uploaded file */
@@ -59,6 +69,7 @@ QiniuAntd.propTypes = {
 
 QiniuAntd.defaultProps = {
   keyFunc: (keyPrefix, filename) => (keyPrefix ? `${keyPrefix}-${new Date().getTime()}-${filename}` : `${new Date().getTime()}-${filename}`),
+  limitedSize: 2,
 }
 
 export default QiniuAntd
